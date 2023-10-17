@@ -1,16 +1,17 @@
 import './ItemCount.css'
+import { useState } from 'react';
 
 const Count = ({initial, stock, onAdd}) =>{
 
     const [ quantity, setQuantity ] = useState( initial );
 
-    const incrase = () =>{
+    const increase = () =>{
         if (quantity < stock){
             setQuantity ( quantity + 1);
         }
     };
 
-    const decrase = () =>{
+    const decrease = () =>{
         if (quantity < stock){
             setQuantity ( quantity - 1);
         }
@@ -21,13 +22,12 @@ const Count = ({initial, stock, onAdd}) =>{
             <div className="counter">
                 <button className="button" onClick={decrease}> - </button>
                 <h4>{quantity}</h4>
-                <button className="button" onClick={increse}> + </button>
+                <button className="button" onClick={increase}> + </button>
             </div>
             <div>
-                <button className="button" onClick={() => onAdd(quantity)} disabled = {!stock} > Añadir </button>
+                <button className="button" onClick={() => onAdd(quantity)} disabled = {!stock} > Agregar </button>
             </div>
         </>
-
     )
 
 }

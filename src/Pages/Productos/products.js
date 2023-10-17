@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { getCheeses } from "../../../mock";
-import Load from "../../Loading/load";
+import { getCheeses } from "../../mock";
+import Load from "../../Components/Loading/load";
 import './products.css';
 import { Link } from "react-router-dom";
 
@@ -40,7 +40,6 @@ const Products = () => {
                     </div>
                 ))}
             </section>
-
         </div>
     )
 

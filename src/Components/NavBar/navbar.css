@@ -32,24 +32,20 @@ color : #BC292D
     transition: 2s; 
     font-weight: 800;
     line-height: 7rem;
-    background: radial-gradient(#BC292D,#F28705);
+    color: #BC292D;
     text-align: center;
     margin-top: 18px;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+
 }
 
 .n-left{
-    color: #BC292D;
-    margin: 0;
-    padding: 0;
     text-transform:lowercase;
     font-family: 'Dosis', sans-serif;
     transition: 10ms;
 }
 
 .name:hover{
-    color: #BC292D;
+    color: #F28705;
     transform: scale(1.1);
     letter-spacing: 5px;
     transition: 0.5s;
@@ -58,7 +54,7 @@ color : #BC292D
 /* Cart */
 
 .navbar-contain{
-    color: #BC292D;
+    color: #F28705;
     display: inline-block;
     font-size: 27px;
     text-decoration: none;

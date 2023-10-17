@@ -1,16 +1,20 @@
 
 import './App.css';
 import Navbar from './Components/NavBar/index-nav';
-import 'bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap-icons/font/bootstrap-icons.min.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
-import Home from './Components/Pages/Home/home';
-import Login from './Components/Pages/Login/login';
-import Products from './Components/Pages/Products-Cheese/products';
-import Detail from './Components/Pages/Detail/detail';
+import Home from './Pages/Home/Home';
+import Login from './Pages/Login/login';
+import Products from './Pages/Productos/products';
+import Detail from './Components/Detail/detail';
+import MyAccount from './Pages/My-Account/index';
+import PrivateRoute from './PrivateRoute';
+import { useState } from 'react';
+import NotFound from './Pages/Not-Found/not-found';
 
 function App() {
+
+  const [session] = useState(false) 
+
   return (
     <BrowserRouter>
       <main>
@@ -20,6 +24,12 @@ function App() {
           <Route path='/login' element={<Login/>}/>
           <Route path='/products' element={<Products/>}/>
           <Route path='/products/:idCheese' element={<Detail/>}/>
+          <Route path='/*' element={<NotFound/>}/>
+          <Route path='/my-account' element={
+            <PrivateRoute session={session}>
+              <MyAccount/>
+            </PrivateRoute>
+          }/>
         </Routes>
       </main>
     </BrowserRouter>

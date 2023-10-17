@@ -6,7 +6,7 @@ const Navbar = () =>{
     const routes = [
         {
             path: '/',
-            text: 'Home'
+            text: 'Inicio'
         }, 
         {
             path: '/products',
@@ -14,7 +14,7 @@ const Navbar = () =>{
         }, 
         {
             path: '/my-account',
-            text: 'Sing In'
+            text: 'Mi Cuenta'
         }
     ]
 
