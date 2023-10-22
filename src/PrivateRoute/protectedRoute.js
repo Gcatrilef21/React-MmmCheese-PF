@@ -4,9 +4,7 @@
 const ProtectedRoute = ({children}) => {
 
     // logica
-    if (!session) return <p>falta autenticar</p>
-
-
+    if(!session) return <Navigate to='/login' replace />
     return children
 
 }
