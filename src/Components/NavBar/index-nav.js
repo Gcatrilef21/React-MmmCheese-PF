@@ -1,33 +1,17 @@
-import { NavLink } from 'react-router-dom'
-import './navbar.css'
+import { Link, NavLink } from 'react-router-dom';
+import '../../App.css';
 
 const Navbar = () =>{
 
-    const routes = [
-        {
-            path: '/',
-            text: 'Inicio'
-        }, 
-        {
-            path: '/products',
-            text: 'Productos'
-        }, 
-        {
-            path: '/my-account',
-            text: 'Mi Cuenta'
-        }
-    ]
+
 
     return (
         <header className='header'>
-            <aside className="name"> mmmc
-                <span className="name n-left">heese</span>
-            </aside>
+            <Link to={'/'} className={'name'}>MMMCheese</Link>
             <nav className="navbar-container">
                 <ul>
-                    {routes.map (({path, text})=>(
-                        <NavLink to={path} className= {( {isActive} ) => isActive ? 'navbar-contain' : 'navbar-letter'}>{text}</NavLink>
-                    ))}
+                    <NavLink end to={'/products'} className= {( {isActive} ) => isActive ? 'navbar-active' : 'navbar-letter'}>Test</NavLink>
+                    
                 </ul>
             </nav>
         </header>

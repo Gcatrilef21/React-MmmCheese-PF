@@ -1,15 +1,14 @@
-
+import { useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import Detail from './Components/Detail/detail';
 import Navbar from './Components/NavBar/index-nav';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/login';
-import Products from './Pages/Productos/products';
-import Detail from './Components/Detail/detail';
 import MyAccount from './Pages/My-Account/index';
-import PrivateRoute from './PrivateRoute';
-import { useState } from 'react';
 import NotFound from './Pages/Not-Found/not-found';
+import Products from './Pages/Productos/products';
+import PrivateRoute from './PrivateRoute';
 
 function App() {
 

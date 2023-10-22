@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Dosis:wght@500&family=Mooli&family=Raleway:ital,wght@1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Nunito&family=Raleway:ital,wght@1,200&family=Roboto+Mono:wght@300&display=swap');
 
-/*  font-family: 'Courgette', cursive;
-font-family: 'Dosis', sans-serif;
-font-family: 'Mooli', sans-serif;
-font-family: 'Raleway', sans-serif; */
+/* font-family: 'Dosis', sans-serif;
+font-family: 'Nunito', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto Mono', monospace; */
+
+/* Generales */
 
 *{
   margin: 0;
@@ -12,22 +14,76 @@ font-family: 'Raleway', sans-serif; */
 }
 
 body{
-  background-color: #f2f2f2;
+  background-color: #F9F5E8 !important;
   max-width: auto;
 }
 
+
 h1{
-  background: radial-gradient(#F27405,#BC292D);
-  font-size: 3rem;
+  font-size:2.5em !important; 
   text-align: center;
   height: 70px;
-  margin-top: 28px !important;
-  font-family: 'Courgette', cursive;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+  font-family: 'Roboto Mono', monospace;
+  margin: 28px 0px 28px!important;
+  color: #7b1000 !important;
+  font-weight: 900 !important;
 }
 
 
+
+/* Header */
+
+.header{
+  height: 127px !important; 
+  width: auto;
+  font-size: 27px !important;
+  background-color:#efebde !important;
+  border-radius: 20px;
+  margin-block:initial ;
+  padding: 20px;
+}
+
+.name{
+  text-decoration:none !important ;
+  text-align: center;
+  color:#E9724C;
+  padding: 10px;
+}
+
+.user{
+    font-size: 140px;
+    color:#936a00 ;
+    font-weight: 500;
+    
+}
+
+.navbar-active{
+  color: #936a00;
+  background-color: #FFC857;
+  padding: 10px;
+  border-radius: 10%;;
+  margin: 15px;
+  font-size: 30px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar-letter{
+  text-decoration: none;
+  margin: 10px;
+  font-size: 27px;
+  color: #F28705;
+  transition: 1s;
+}
+
+.navbar-letter:hover{
+  color: #5c5c5c;
+  text-wrap: balance;
+  padding: 7px;
+  font-size: 27px;
+  transform: scale(1.2);
+  transition: 0.2s;
+}
 
 /* CSS Card Detail */
 .card-detail{
@@ -53,3 +109,19 @@ h1{
   width: 318px;
   border-radius: 28px 28px 0px 0px;
 }
+
+
+/* Page Not Found */
+.not-page{
+  display: grid;
+}
+
+
+
+
+
+.found-Img{
+  justify-content: center;;
+  border: #BC292D solid 1px;
+}
+
