@@ -1,9 +1,9 @@
 
+import { Navigate } from "react-router-dom"
 
 
-const ProtectedRoute = ({children}) => {
+const ProtectedRoute = ({children, session}) => {
 
-    // logica
     if(!session) return <Navigate to='/login' replace />
     return children
 

@@ -1,6 +1,30 @@
+import { useState } from 'react'
 import '../../App.css'
+import { useNavigate } from 'react-router-dom'
 
-const Login = () => {
+const Login = ({onLogin}) => {
+
+    const navigate = useNavigate()
+
+    const [form, setForm] = useState({
+        email:'',
+        password:''
+    })
+
+    const handleOnChange = ({target}) =>{
+        const {value, name} = target
+        setForm(prev =>({
+            ...prev,
+            [name]:value
+        }))
+    }
+
+    const handleOnSubmit = (e) =>{
+        e.preventDefault()
+        const session = {...form, token:124345}
+        onLogin(session)
+        navigate('/products')
+    }
 
     return (
         <section className='form-card'>
@@ -10,14 +34,14 @@ const Login = () => {
             </div>
             <div className="field">
                 <label for="username">Usuario</label>
-                <input className="input" name="username" type="text" placeholder="Ingrese su Usuario" />
+                <input onChange={handleOnChange} className="input" name="email" type="text" placeholder="Ingrese su Usuario" />
             </div>
             <div className="field">
                 <label for="password">Contraseña</label>
-                <input className="input" name="user_password" type="password" placeholder="Ingrese su Contraseña" />
+                <input onChange={handleOnChange} className="input" name="password" type="text" placeholder="Ingrese su Contraseña" />
             </div>
             <div className="field">
-                <button className="button">Ingresar</button>
+                <button onClick={handleOnSubmit} className="button">Ingresar</button>
             </div>
         </form>
         </section>

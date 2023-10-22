@@ -8,11 +8,15 @@ import Login from './Pages/Login/login';
 import MyAccount from './Pages/My-Account/index';
 import NotFound from './Pages/Not-Found/not-found';
 import Products from './Pages/Productos/products';
-import PrivateRoute from './PrivateRoute';
+import ProtectedRoute from './PrivateRoute/protectedRoute';
 
 function App() {
 
-  const [session] = useState(false) 
+  const [session, setSession] = useState(null)
+
+  const handleSetSesion = (user)=> {
+    setSession(user);
+  }
 
   return (
     <BrowserRouter>
@@ -20,14 +24,14 @@ function App() {
       <Navbar/>
         <Routes>
           <Route path='/' element= {<Home/>}/>
-          <Route path='/login' element={<Login/>}/>
+          <Route path='/login' element={<Login onLogin={handleSetSesion} />}/>
           <Route path='/products' element={<Products/>}/>
           <Route path='/products/:idCheese' element={<Detail/>}/>
           <Route path='/*' element={<NotFound/>}/>
           <Route path='/my-account' element={
-            <PrivateRoute session={session}>
+            <ProtectedRoute session= {session}>
               <MyAccount/>
-            </PrivateRoute>
+            </ProtectedRoute>
           }/>
         </Routes>
       </main>
