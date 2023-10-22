@@ -30,7 +30,7 @@ function App() {
           <Route path='/*' element={<NotFound/>}/>
           <Route path='/my-account' element={
             <ProtectedRoute session= {session}>
-              <MyAccount/>
+              <MyAccount onLogout = {handleSetSesion}/>
             </ProtectedRoute>
           }/>
         </Routes>

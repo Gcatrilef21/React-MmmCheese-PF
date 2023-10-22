@@ -23,7 +23,7 @@ const Login = ({onLogin}) => {
         e.preventDefault()
         const session = {...form, token:124345}
         onLogin(session)
-        navigate('/products')
+        navigate('/my-account')
     }
 
     return (
