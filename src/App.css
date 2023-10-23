@@ -15,6 +15,7 @@ font-family: 'Roboto Mono', monospace; */
 
 main{
   background-color: #F9F5E8 !important;
+  min-height: 700px;
   max-width: auto;
   height: 1900px !important;
 }
@@ -85,11 +86,10 @@ h1{
 
 /* CSS Card Detail */
 .card-detail{
-  height: 520px;
-  width: 320px;
-  background: linear-gradient(to top, #F2D194, 85%, #D95204);
-  border: 1px solid #BC292D ;
-  border-radius: 28px;
+  margin-top: 30px;
+  height: 1720px;
+  width:  100px;
+  padding: 20px;
 }
 
 .desc-text{
@@ -100,6 +100,7 @@ h1{
   display: block;
   padding: 20px;
   margin-top: 10px;
+  text-align: center;
 }
 
 .imgProduct{
@@ -107,6 +108,24 @@ h1{
   width: 318px;
   border-radius: 28px 28px 0px 0px;
 }
+
+/* ItemCount*/
+
+.counter{
+  width: 400px;
+  display: flex;
+  justify-items: center;
+}
+
+.button-count{
+  margin: 0 10px 0 10px;
+}
+
+.btn-add{
+  width: 400px;
+  font-weight: bold;
+}
+
 
 
 /* Page Not Found */
@@ -185,12 +204,13 @@ button {
   border: 2px solid var(--color);
   border-radius: 20px !important;
   position: relative;
+  background:#efebde ;
 }
 
 button::before {
   position: absolute;
   content: "";
-  background: var(--color);
+  background: #FFC857;
   width: 150px;
   height: 200px;
   z-index: -1;
@@ -198,7 +218,7 @@ button::before {
 }
 
 button:hover {
-  color:#FFC857;
+  color:#7b1000;
 }
 
 button:before {
