@@ -15,9 +15,8 @@ font-family: 'Roboto Mono', monospace; */
 
 main{
   background-color: #F9F5E8 !important;
-  min-height: 700px;
   max-width: auto;
-  height: 1900px !important;
+  height: auto !important;
 }
 
 
