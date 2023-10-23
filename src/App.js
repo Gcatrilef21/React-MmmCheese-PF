@@ -27,6 +27,7 @@ function App() {
           <Route path='/login' element={<Login onLogin={handleSetSesion} />}/>
           <Route path='/products' element={<Products/>}/>
           <Route path='/products/:idCheese' element={<Detail/>}/>
+          <Route path='/products/:idCheese' element={<Detail/>}/>
           <Route path='/*' element={<NotFound/>}/>
           <Route path='/my-account' element={
             <ProtectedRoute session= {session}>
