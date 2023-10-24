@@ -20,10 +20,10 @@ const Count = ({initial, stock, onAdd}) =>{
     return (
         <>
             <div className="counter">
-                <button className="button-count" onClick={decrease} disabled = {quantity === 0}> - </button>
+                <button className="button-count" onClick={decrease}> - </button>
                 <h4>{quantity}</h4>
                 <button className="button-count" onClick={increase}> + </button>
-                <button className="button-count btn-add" onClick={() => onAdd(quantity)} > Agregar </button>
+                <button className="button-count btn-add" onClick={() => onAdd(quantity)} disabled = {!stock} > Agregar </button>
             </div>
         </>
     )
