@@ -5,6 +5,8 @@ import './products.css';
 import { Link } from "react-router-dom";
 
 
+
+
 const Products = () => {
 
     const [loading, setLoading] = useState(false)
@@ -24,12 +26,12 @@ const Products = () => {
         <div >
             <h1>Nuestro Quesos</h1>
             <section className="item">
-                {cheeses.map(({ id, image, name, price, stock }) => (
+                {cheeses.map(({ id, image, title, price, stock }) => (
                     <div key={id} className="card">
                         <div >
                             <img className="imglogo" src={`/images/${image}`} alt="ImgCheese" />
                             <div className="card__content">
-                                <h3 className="card__title">{name}</h3>
+                                <h3 className="card__title">{title}</h3>
                                 <p className="card__description" >Precio: ${price} </p>
                                 <p className="card__description">Stock: {stock}</p>
                                 <footer>

@@ -13,7 +13,8 @@ const Detail = () => {
 
     useEffect(() => {
         setLoading(true);
-        getCheesesById(idCheese)
+
+    getCheesesById(idCheese)
             .then(resp => setCheeses(resp))
             .catch(err => { console.error(err) })
             .finally(() => setLoading(false))
