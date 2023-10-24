@@ -2,12 +2,13 @@ import Count from "../ItemCount/ItemCount"
 import '../../App.css'
 
 
-const ItemDetail = ({ title, image, price, stock, description }) => {
+const ItemDetail = ({ title, image, price, stock, description,category }) => {
 
     return (
         <div className="container detail">
             <img className="imgProduct" src={`../images/${image}`} alt={title} />
             <h3>{title}</h3>
+            <h4>{category}</h4>
             <div className="desc-text">
                 <p>Precio: {price}</p>
                 <p>Stock: {stock}</p>

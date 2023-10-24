@@ -14,7 +14,7 @@ const cheeses = [{
     description:' Se produce en la ciudad de Edam y otras regiones de los Países Bajos. Este queso se destaca por su sabor suave y ligeramente dulce, así como por su textura firme y compacta.',
     price: 9.990,
     stock: 20,
-    country:'Paises Bajos'
+    category:'Queso Semi-Duro'
 }, {
     id: 3,
     image: 'maasdam.png',
@@ -59,7 +59,7 @@ const cheeses = [{
     id: 8,
     image: 'emmental.png',
     title: 'Emmental',
-    description: 'El queso Emmental es un queso suizo de renombre internacional que se destaca por sus característicos agujeros o "ojos".',
+    description: 'El queso Emmental es un queso suizo de renombre internacional que se destaca por sus característicos agujeros u "ojos".',
     price: 9.990,
     stock: 12,
     category: 'Suizo'
