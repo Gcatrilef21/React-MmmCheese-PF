@@ -5,10 +5,38 @@ export const CartContext = createContext()
 export const CartProvider = ({children}) =>{
 
     const [cart, setCart] = useState([])
+    console.log(cart)
+
+    const addCheese = (item, quantity) => {
+        if(isInCart(item.id)){
+            setCart(cart.map((product)=>{
+                if(product.id === item.id){
+                    return {...product, quantity:product.quantity + quantity}
+                }else {
+                    return product
+                }
+            }))
+        }else{
+            setCart([...cart,{...item, quantity}])
+        }
+    }
+
+    const clear = () =>{
+        setCart([])
+    }
+
+    const isInCart = (id) =>{
+        return cart.some((item)=> item.id === id)
+    }
+    
+
+    const deleteCheese = (id) =>{
+        setCart(cart.filter((item) => item.id !== id))
+    }
 
     return(
 
-        <CartContext.Provider value= {{cart}}>
+        <CartContext.Provider value= {{cart,addCheese, clear, deleteCheese}}>
             {children}
         </CartContext.Provider>
     )

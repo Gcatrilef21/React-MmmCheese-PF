@@ -1,16 +1,21 @@
 import Count from "../ItemCount/ItemCount"
 import '../../App.css'
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "../../context/cart-context";
 
+const ItemDetail = (cheese) => { 
 
-const ItemDetail = ({ title, image, price, stock, description,category }) => {
 
     const [quantityAdded, setQuantityAddded] = useState('');
+    const {addCheese} = useContext(CartContext)
 
     const onAdd = (cantidad) => {
         setQuantityAddded(cantidad)
+        addCheese(cheese, cantidad)
     }
+
+    const { title, image, price, stock, description,category } = cheese
 
     return (
         <div className="container detail">
@@ -24,16 +29,9 @@ const ItemDetail = ({ title, image, price, stock, description,category }) => {
             </div>
             <footer className="footer-detail">
             {quantityAdded === '' 
-                ? <Count initial={1} stock={stock} onAdd={onAdd}/>
-                : <Link to={'/cart'} className="btn-add" >Ir al Carrito</Link>
-            }  
-
-
-
-
-
-            {/* <Count initial={0} stock={stock} onAdd={(quantity) => console.log('Productos Agregados', quantity)} /> */}
-            
+                ? <Count initial={0} stock={stock} onAdd={onAdd}/>
+                : <Link to={'/cart'} className="btn btn-dark" >Ir al Carrito</Link>
+            }              
             </footer>
         </div>
     )

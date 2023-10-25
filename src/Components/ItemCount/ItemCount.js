@@ -23,8 +23,8 @@ const Count = ({initial, stock, onAdd}) =>{
                 <button className="button-count" onClick={decrease}> - </button>
                 <h4>{quantity}</h4>
                 <button className="button-count" onClick={increase}> + </button>
-                <button className="button-count btn-add" onClick={() => onAdd(quantity)} disabled = {!stock} > Agregar </button>
             </div>
+            <button className="button-count btn-add" onClick={() => onAdd(quantity)} disabled ={!stock} > Agregar </button>
         </>
     )
 

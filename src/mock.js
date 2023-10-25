@@ -4,7 +4,7 @@ const cheeses = [{
     title: 'Gouda',
     description: 'El queso Gouda es un queso de origen holandés conocido por su sabor suave y cremoso. Es versátil y se utiliza en una amplia variedad de platos, desde aperitivos hasta sándwiches y platos de queso fundido',
     price: 5990,
-    stock: 16,
+    stock: 6,
     category:'Paises Bajos'
 },  
 {
