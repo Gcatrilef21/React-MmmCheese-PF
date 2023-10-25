@@ -1,10 +1,8 @@
 import '../../App.css'
 
 
-const Cart = () =>{
+export const Cart = () =>{
     return(
         <p>Carrito CheckOut</p>
     )
 }
-
-export default Cart

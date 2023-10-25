@@ -10,6 +10,7 @@ import NotFound from './Pages/Not-Found/not-found';
 import Products from './Pages/Productos/products';
 import ProtectedRoute from './PrivateRoute/protectedRoute';
 import { CartProvider } from './context/cart-context';
+import { Cart } from './Pages/Cart/cart';
 
 function App() {
 
@@ -28,7 +29,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/login' element={<Login onLogin={handleSetSesion} />} />
             <Route path='/products' element={<Products />} />
-            <Route path='/products/:idCheese' element={<Detail />} />
+            <Route path='/cart' element={<Cart/>} />
             <Route path='/products/:idCheese' element={<Detail />} />
             <Route path='/*' element={<NotFound />} />
             <Route path='/my-account' element={

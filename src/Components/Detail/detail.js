@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import { getCheesesById } from "../../mock";
 import Load from "../Loading/load";
 import ItemDetail from "./ItemDetail";
-import { getItem } from "../../services/services";
 
 const Detail = () => {
 
@@ -14,16 +13,16 @@ const Detail = () => {
 
     useEffect(() => {
         setLoading(true);
-        getItem(idCheese)
+        /* getItem(idCheese)
             .then((snapshot) =>{
                 setCheeses({ id: snapshot.id, ...snapshot.data()})
             })
             .catch(err => { console.error(err) })
-            .finally(() => setLoading(false)) 
-        /* getCheesesById(idCheese)
+            .finally(() => setLoading(false))  */
+        getCheesesById(idCheese)
             .then(resp => setCheeses(resp))
             .catch(err => { console.error(err) })
-            .finally(() => setLoading(false)) */
+            .finally(() => setLoading(false))
     }, [idCheese])
 
     if (loading) return <Load />
