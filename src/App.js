@@ -9,33 +9,36 @@ import MyAccount from './Pages/My-Account/index';
 import NotFound from './Pages/Not-Found/not-found';
 import Products from './Pages/Productos/products';
 import ProtectedRoute from './PrivateRoute/protectedRoute';
+import { CartProvider } from './context/cart-context';
 
 function App() {
 
   const [session, setSession] = useState(null)
 
-  const handleSetSesion = (user)=> {
+  const handleSetSesion = (user) => {
     setSession(user);
   }
 
   return (
     <BrowserRouter>
-      <main>
-      <Navbar/>
-        <Routes>
-          <Route path='/' element= {<Home/>}/>
-          <Route path='/login' element={<Login onLogin={handleSetSesion} />}/>
-          <Route path='/products' element={<Products/>}/>
-          <Route path='/products/:idCheese' element={<Detail/>}/>
-          <Route path='/products/:idCheese' element={<Detail/>}/>
-          <Route path='/*' element={<NotFound/>}/>
-          <Route path='/my-account' element={
-            <ProtectedRoute session= {session}>
-              <MyAccount onLogout = {handleSetSesion}/>
-            </ProtectedRoute>
-          }/>
-        </Routes>
-      </main>
+      <CartProvider>
+        <main>
+          <Navbar/>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/login' element={<Login onLogin={handleSetSesion} />} />
+            <Route path='/products' element={<Products />} />
+            <Route path='/products/:idCheese' element={<Detail />} />
+            <Route path='/products/:idCheese' element={<Detail />} />
+            <Route path='/*' element={<NotFound />} />
+            <Route path='/my-account' element={
+              <ProtectedRoute session={session}>
+                <MyAccount onLogout={handleSetSesion} />
+              </ProtectedRoute>
+            } />
+          </Routes>
+        </main>
+      </CartProvider>
     </BrowserRouter>
   );
 }
