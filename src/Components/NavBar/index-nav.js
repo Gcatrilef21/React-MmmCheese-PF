@@ -1,12 +1,14 @@
 import { Link, NavLink } from 'react-router-dom';
 import '../../App.css';
+import CartIcon from '../CartIcon/cartIcon';
 import { User } from '../../icons/incon';
+
 
 const Navbar = () =>{
 
     return (
         <header className='header'>
-            <Link to={'/'} className={'name'}>MMMCheese</Link>
+            <Link to={'/products'} className={'name'}>MMMCheese</Link>
             <nav className="navbar">
                 <ul>
                     <NavLink end to={'/products'} className= {( {isActive} ) => 
@@ -19,6 +21,10 @@ const Navbar = () =>{
                 <ul>
                     <NavLink end to={'/my-account'} className= {( {isActive} ) => 
                         isActive ? 'navbar-active' : 'navbar-letter'}> <User/> </NavLink>
+                </ul>
+                <ul>
+                    <NavLink end to={'/cart'} className= {( {isActive} ) => 
+                        isActive ? 'navbar-active' : 'navbar-letter'}> <CartIcon/></NavLink>
                 </ul>
             </nav>
         </header>

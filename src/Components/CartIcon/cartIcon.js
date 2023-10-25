@@ -1,12 +1,17 @@
-import '../NavBar/navbar.css'
+import { useContext } from 'react'
+import '../../App.css'
+import { CartFull } from '../../icons/incon'
+import { CartContext } from '../../context/cart-context'
 
 const CartIcon = () => {
+
+    const {cartQuantity} = useContext(CartContext)
+
     return(
-        <>
-            <i className="bi bi-cart4"> 
-                <span> 0 </span>
-            </i> 
-        </>
+        <div>
+            <CartFull/>
+            {cartQuantity()>0 && <span className='count'>{cartQuantity()}</span>}
+        </div>
     )
 }
 
