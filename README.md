@@ -1,14 +1,8 @@
 ###### Proyecto Coder - Ecommerce
 # MMMCheese
 
-Es un proyecto familiar heredado.El cual tiene como finalidad acercar sabores de uno de los ingredientes mas solicitados en la cocinas del mundo, **El Queso**
+Es un proyecto familiar heredado.El cual tiene como finalidad acercar sabores de uno de los ingredientes mas solicitados en la cocinas del mundo, **El sabor de diferentes Quesos**
  
-## Descripcion
-
-* React 
-* React-Router-DOM
-* Firebase (FireStore)
-* Boostrap - BoostrapIcon
 
 ## Tecnologias Utilizadas
 >   Sitema Operativo : Windows 
