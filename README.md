@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+###### Proyecto Coder - Ecommerce
+# MMMCheese
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Es un proyecto familiar heredado.El cual tiene como finalidad acercar sabores de uno de los ingredientes mas solicitados en la cocinas del mundo, **El Queso**
+ 
+## Descripcion
 
-## Available Scripts
+* React 
+* React-Router-DOM
+* Firebase (FireStore)
+* Boostrap - BoostrapIcon
 
-In the project directory, you can run:
+## Tecnologias Utilizadas
+>   Sitema Operativo : Windows 
+>
+>   Lenguaje de Programacion : JavaScript
+>
+1. React 
+2. React-Router-DOM
+2. Firebase (FireStore)
+2. Boostrap - BoostrapIcon
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Como Iniciar Proyecto
+###### Requisito Previo
+Para iniciar el proyecto debes tener instalado Node.js
+* [Node.js](https://nodejs.org/en/). 
+Asegurate tener instalada la version LTS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Iniciar el proyecto en tu entorno local
+1. Clonar, este repositorio en tu PC.
+2. Abrir la terminal o la powerShell en la ubicacion donde guardaste el repositorio.
+3. Ejecutar los comandos:
+    * `npm install`  para instalar las dependencias.
+    * `npm run start` para iniciar la aplicación
+4. Abre http://localhost:3000/ en tu navegador web preferido
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Principales Caracteristicas
+* Visualizacion de Productos.
+* Busqueda de Productos.
+* Agragar Productos a un carrito.
+* Ver / Modificar un carrito.
+* Finalizar el pedido.
