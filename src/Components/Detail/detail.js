@@ -3,8 +3,6 @@ import { useParams } from "react-router-dom";
 import { getCheesesById } from "../../mock";
 import Load from "../Loading/load";
 import ItemDetail from "./ItemDetail";
-import { collection, getDocs } from "firebase/firestore";
-import { db } from "../../services/config";
 
 const Detail = () => {
 
@@ -19,9 +17,9 @@ const Detail = () => {
             .then(resp => setCheeses(resp))
             .catch(err => { console.error(err) })
             .finally(() => setLoading(false))
-    }, [idCheese])
+    }, [idCheese]);
 
-    /* useEffect(() =>{
+   /*  useEffect(() =>{
         setLoading(true)
         const testCollection = collection(db, "cheese")
         getDocs(testCollection)
