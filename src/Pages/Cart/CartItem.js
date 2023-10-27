@@ -12,7 +12,7 @@ const CartItem = ({item}) => {
             <img src={`/images/${item.image}`} alt={item.title} width={'100rem'}/>
             <p>{item.title}</p>
             <p>$ {item.price}</p>
-            <p>$ {item.quatity}</p>
+            <p>{item.quantity}</p>
             <p>SubTotal : $ {item.quantity * item.price} </p>
             <button className="btn btn-danger" onClick={()=> deleteCheese(item.id)}><strong>X</strong></button>
 

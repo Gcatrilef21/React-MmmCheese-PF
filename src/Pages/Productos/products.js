@@ -5,8 +5,6 @@ import './products.css';
 import { Link } from "react-router-dom";
 
 
-
-
 const Products = () => {
 
     const [loading, setLoading] = useState(false)
