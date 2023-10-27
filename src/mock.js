@@ -98,6 +98,20 @@ const cheeses = [{
 }
 ]
 
+const category = [{
+    id: 'mens-clothing',
+    name: 'mens-clothing'
+  }]
+
+
+export const getCategory = () =>{
+    return new Promise ((resolve) => {
+        setTimeout(()=> {
+            return resolve(category)
+        },1000)
+    })
+}
+
 export const getCheeses = () => {
     
     return new Promise ((resolve) => {
