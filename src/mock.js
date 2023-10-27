@@ -101,7 +101,7 @@ const cheeses = [{
 const category = [{
     id: 'mens-clothing',
     name: 'mens-clothing'
-  }]
+    }]
 
 
 export const getCategory = () =>{
