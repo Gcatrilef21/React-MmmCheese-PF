@@ -29,7 +29,7 @@ const Products = () => {
                 {cheeses.map(({ id, image, title, price, stock }) => (
                     <div key={id} className="card">
                         <div >
-                            <img className="imglogo" src={`/images/${image}`} alt="ImgCheese" />
+                            <img className="imglogo" src={`/images/${image}`} alt={title} />
                             <div className="card__content">
                                 <h3 className="card__title">{title}</h3>
                                 <p className="card__description" >Precio: ${price} </p>

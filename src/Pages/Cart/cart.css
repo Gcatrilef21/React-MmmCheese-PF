@@ -1,0 +1,30 @@
+
+.empty{
+    margin-top: 100px;
+}
+
+
+h4{
+   /*  margin-bottom: 20px !important; */
+    justify-content: center;
+}
+
+.btn-buy{
+    width: 170px;
+    text-align: center;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #F9F5E8;
+    background-color:#E9724C ;
+    padding: 7px;
+}
+
+/* d-flex justify-content-around align-items-center' */
+.cartItem{
+    margin-top: 100px;
+    background-color: #FFC857;
+    color: #936a00;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
