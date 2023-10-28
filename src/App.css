@@ -16,7 +16,7 @@ font-family: 'Roboto Mono', monospace; */
 main{
   background-color: #F9F5E8 !important;
   max-width: auto;
-  min-height: 741px !important;
+  height: 1000px;
 }
 
 
@@ -37,9 +37,8 @@ h1{
   width:  100px;
   padding: 20px;
 }
-
 .desc-text{
-  color: #BC292D;
+  color: #5c5c5c;
   font-family: 'Mooli', sans-serif;
   font-weight: bold;
   text-wrap: balance;

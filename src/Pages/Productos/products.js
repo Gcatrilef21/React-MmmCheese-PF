@@ -1,6 +1,6 @@
 import { collection, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Load from "../../Components/Loading/load";
 import { db } from "../../services/config";
 import './products.css';
@@ -10,6 +10,7 @@ const Products = () => {
 
     const [loading, setLoading] = useState(false)
     const [cheeses, setCheeses] = useState([])
+    const {category} = useParams();
 
     /* useEffect(() => {
         setLoading(true)

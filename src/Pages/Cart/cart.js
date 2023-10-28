@@ -20,7 +20,7 @@ const {cart, clear,total}= useContext(CartContext)
                     </div>
                 </section>
                 :<section className='container'>
-                    <h4 >Tu carrito esta empty</h4>
+                    <h4 >Tu carrito esta vacio</h4>
                     <Link to={'/products'} className='btn-buy'> Seguir Comprando</Link>
                 </section>}
         </div>

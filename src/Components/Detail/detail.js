@@ -1,6 +1,7 @@
+import { collection, doc, getDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getCheesesById } from "../../mock";
+import { db } from "../../services/config";
 import Load from "../Loading/load";
 import ItemDetail from "./ItemDetail";
 
@@ -10,25 +11,26 @@ const Detail = () => {
     const [cheeses, setCheeses] = useState(null);
     const { idCheese } = useParams();
 
-    useEffect(() => {
-        setLoading(true);
+    /*useEffect(() => {
+         setLoading(true);
         
         getCheesesById(idCheese)
             .then(resp => setCheeses(resp))
             .catch(err => { console.error(err) })
             .finally(() => setLoading(false))
-    }, [idCheese]);
+    }, [idCheese]); */
 
-   /*  useEffect(() =>{
-        setLoading(true)
-        const testCollection = collection(db, "cheese")
-        getDocs(testCollection)
-            .then((resp) => console.log(resp))
-            .catch((error) => alert( 'Ojo cuidao', error))
-            .finally(() => setLoading(false))
-    },[]) */
+    useEffect(()=>{
+        setLoading(true);
+        const collectProd = collection(db, 'cheese')
+        const docRef = doc(collectProd,idCheese)
+        getDoc(docRef)
+            .then((resp) => setCheeses({idCheese:resp.id, ...resp.data()}))
+            .catch(err => console.error(err))
+            .finally(()=> setLoading(false))
+    },[])
 
-    if (loading) return <Load />
+    if (loading) return <Load /> 
 
     return (
         <section >
