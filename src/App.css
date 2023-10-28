@@ -30,59 +30,6 @@ h1{
   font-weight: 900 !important;
 }
 
-.icon-gnr {
-  height: 50px;
-  width: 120px;
-  font-size: large;
-  color: #E9724C;
-}
-
-/* Header */
-
-.header{
-  height: 127px !important; 
-  width: auto;
-  font-size: 27px !important;
-  background-color:#efebde !important;
-  border-radius: 20px;
-  padding: 20px;
-}
-
-.name{
-  text-decoration:none !important ;
-  text-align: center;
-  text-align: center;
-  font-weight: 500;
-  color:#E9724C;
-  padding: 10px;
-}
-
-.navbar-active{
-  color: #936a00 !important;
-  padding: 10px;
-  margin: 5px;
-  font-size: 30px;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.navbar-letter{
-  text-decoration: none;
-  margin: 10px;
-  font-size: 27px;
-  color: #E9724C;
-  transition: 1s;
-}
-
-.navbar-letter:hover{
-  color: #7b1000;
-  padding: 7px;
-  font-size: 27px;
-  font-weight: 400;
-  transform: scale(1.2);
-  transition: 0.2s;
-}
-
 /* CSS Card Detail */
 .card-detail{
   margin-top: 30px;

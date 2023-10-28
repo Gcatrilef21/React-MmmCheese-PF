@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
-import '../../App.css';
+import './navbar.css';
 import CartIcon from '../CartIcon/cartIcon';
 import { User } from '../../icons/incon';
 
@@ -8,23 +8,19 @@ const Navbar = () =>{
 
     return (
         <header className='header'>
-            <Link to={'/products'} className={'name'}>MMMCheese</Link>
-            <nav className="navbar">
+            <Link to={'/products'} className='name' >MMMCheese</Link>
+            <nav>
                 <ul>
-                    <NavLink end to={'/products'} className= {( {isActive} ) => 
-                        isActive ? 'navbar-active' : 'navbar-letter'}>Productos</NavLink>
+                    <NavLink to={'/products'} className= {( {isActive} ) => 
+                        isActive ? 'navActive' : 'navBack'}>Productos</NavLink>
                 </ul>
                 <ul>
-                    <NavLink end to={'/'} className= {( {isActive} ) => 
-                        isActive ? 'navbar-active' : 'navbar-letter'}>Orden</NavLink>
+                    <NavLink to={'/my-account'} className= {( {isActive} ) => 
+                        isActive ? 'navActive' : 'navBack'}> <User/> </NavLink>
                 </ul>
                 <ul>
-                    <NavLink end to={'/my-account'} className= {( {isActive} ) => 
-                        isActive ? 'navbar-active' : 'navbar-letter'}> <User/> </NavLink>
-                </ul>
-                <ul>
-                    <NavLink end to={'/cart'} className= {( {isActive} ) => 
-                        isActive ? 'navbar-active' : 'navbar-letter'}> <CartIcon/></NavLink>
+                    <NavLink to={'/cart'} className= {( {isActive} ) => 
+                        isActive ? 'navActive' : 'navBack'}> <CartIcon/></NavLink>
                 </ul>
             </nav>
         </header>

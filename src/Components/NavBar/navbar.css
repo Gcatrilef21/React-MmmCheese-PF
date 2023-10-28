@@ -1,0 +1,52 @@
+/* Header */
+
+.header{
+    height: 127px; 
+    width: auto;
+    font-size:28px;
+    font-family: 'Roboto Mono', monospace;
+    background-color:#efebde !important;
+    border-radius: 20px;
+    display: flex;
+    justify-content:space-around;
+}
+
+.name{
+    width: 210px;
+    text-decoration:none;
+    font-weight: bolder !important;
+    color:#E9724C;
+    display: grid;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navActive{
+    color: #936a00 !important;
+    font-size: 28px !important;
+    text-decoration: none;
+
+}
+
+.navBack{
+    text-decoration: none;
+    margin: 10px;
+    font-size: 22px;
+    color: #E9724C;
+    transition: 1s;
+}
+
+.navBack:hover{
+    border-radius: 20px;
+    padding: 7px;
+    font-size: 27px;
+    font-weight: 400;
+    transform: scale(1.2);
+    transition: 0.2s;
+}
