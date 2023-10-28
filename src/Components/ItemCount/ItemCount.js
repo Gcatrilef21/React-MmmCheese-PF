@@ -6,16 +6,16 @@ const Count = ({initial, stock, onAdd}) =>{
     const [ quantity, setQuantity ] = useState( initial );
 
     const increase = () =>{
-        if (quantity < stock){
-            setQuantity ( quantity + 1);
-        }
+        if (quantity >= stock)return
+            setQuantity ( prev => prev + 1);
     };
 
     const decrease = () =>{
-        if (quantity < stock){
-            setQuantity ( quantity - 1);
-        }
+        if (quantity <= 0) return
+            setQuantity ( prev => prev - 1);
+        
     };
+    console.log(decrease)
 
     return (
         <>

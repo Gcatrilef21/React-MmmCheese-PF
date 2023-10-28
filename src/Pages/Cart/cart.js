@@ -16,7 +16,7 @@ const {cart, clear,total}= useContext(CartContext)
                     <p className='totPrice'>Total a pagar: ${total()}</p>
                     <div>
                         <button onClick={clear} className='btn-cart'> Vaciar Carrito </button>
-                        <button className='btn-cart' > Terminar Compra </button>
+                        <Link to={'/checkout'}><button className='btn-cart' > Terminar Compra </button></Link>
                     </div>
                 </section>
                 :<section className='container'>

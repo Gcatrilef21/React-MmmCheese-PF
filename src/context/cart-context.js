@@ -1,11 +1,17 @@
 
 import { createContext, useState } from "react";
+import { Storage } from "../services/storage";
+import { useEffect } from "react";
 
 export const CartContext = createContext()
 
 export const CartProvider = ({children}) =>{
 
-    const [cart, setCart] = useState([])
+    const [cart, setCart] = useState(()=> Storage.get('cart') || [])
+
+    useEffect(()=> {
+        Storage.add('cart', cart)
+    },[cart])
 
     const addCheese = (item, quantity) => {
         if(isInCart(item.id)){

@@ -38,7 +38,7 @@ const Login = ({onLogin}) => {
             </div>
             <div className="field">
                 <label for="password">Contraseña</label>
-                <input onChange={handleOnChange} className="input" name="password" type="text" placeholder="Ingrese su Contraseña" />
+                <input onChange={handleOnChange} className="input" name="password" type="password" placeholder="Ingrese su Contraseña" />
             </div>
             <div className="field">
                 <button onClick={handleOnSubmit} className="login-btn">Ingresar</button>

@@ -52,8 +52,8 @@ const Products = () => {
                                 <h3 className="card__title">{title}</h3>
                                 <p className="card__description" >Precio: ${price} </p>
                                 <p className="card__description">Stock: {stock}</p>
-                                <footer>
-                                    <Link to ={`/products/${id}`} className="card-footer">detalle...</Link>
+                                <footer className="field">
+                                    <Link to ={`/products/${id}`} className="infoDetail">detalle...</Link>
                                 </footer>
                             </div>
                         </div>

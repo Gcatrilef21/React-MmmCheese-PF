@@ -28,7 +28,7 @@ const Detail = () => {
             .then((resp) => setCheeses({idCheese:resp.id, ...resp.data()}))
             .catch(err => console.error(err))
             .finally(()=> setLoading(false))
-    },[])
+    },[idCheese])
 
     if (loading) return <Load /> 
 
