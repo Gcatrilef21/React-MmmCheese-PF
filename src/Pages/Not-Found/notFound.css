@@ -1,0 +1,39 @@
+/* Page Not Found */
+.notFound {
+    width: 720px;
+    height: 780px;
+}
+
+.info{
+    height: 54px;
+    display: flex;
+    align-items: flex-start;
+}
+.back{
+    color: #7b1000 !important;
+    height: 28px;
+    width: 50px;
+    display: inline;
+    cursor: pointer;
+}
+.text-found{
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+}
+.text-error{
+    margin-bottom: 20px;
+}
+
+h4{
+    color: #7b1000 !important;
+}
+
+h5{
+    color: #936a00 !important;
+}
+
+.found-Img {
+    width: 720px;
+    height: 780px;
+    border-radius: 30px;
+}

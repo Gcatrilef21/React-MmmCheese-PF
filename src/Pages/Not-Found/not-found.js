@@ -1,13 +1,16 @@
 import imgFoud from './notfound.png'
-import '../../App.css'
+import './notFound.css'
 import { Link } from 'react-router-dom'
 import { Back } from '../../icons/incon'
 
 const NotFound = () => {
     return (
-        <section className='not-page'>
-            <h1>pagina no encontrada</h1>
-            <Link to ={`/`} className="nFoundBack"> <Back/> </Link>
+        <section className='container notFound'>
+            <div className='info'>
+                <Link to ={`/`} className="back"> <Back/></Link>
+                <h4 className='text-found'>Lo sentimos, no encontramos nada...</h4>
+            </div>
+            <h5 className='text-error'><strong>Pagina No Encontrada</strong></h5>
             <img className="found-Img " src={imgFoud} alt="PageNotFound" />     
         </section>
     )

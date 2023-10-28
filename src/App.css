@@ -127,16 +127,6 @@ h1{
 
 
 
-/* Page Not Found */
-.not-page{
-  display: grid;
-}
-.found-Img{
-  justify-content: center;;
-  border: #BC292D solid 1px;
-}
-
-
 /* Form */
 
 .form-card{
