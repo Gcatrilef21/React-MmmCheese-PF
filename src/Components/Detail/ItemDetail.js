@@ -30,7 +30,7 @@ const ItemDetail = (cheese) => {
             <footer className="footer-detail">
             {quantityAdded === '' 
                 ? <Count initial={0} stock={stock} onAdd={onAdd}/>
-                : <Link to={'/cart'} className="btn btn-dark" >Ir al Carrito</Link>
+                : <Link to={'/cart'} className="btn cart-btn" >Ir al Carrito</Link>
             }              
             </footer>
         </div>

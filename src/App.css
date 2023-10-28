@@ -59,7 +59,9 @@ h1{
 .counter{
   width: 400px;
   display: flex;
-  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
 .button-count{
@@ -71,7 +73,11 @@ h1{
   font-weight: bold;
 }
 
-
+.cart-btn{ 
+  border: 1px solid #7b1000 !important;
+  background-color: #FFC857 !important;
+  color: #7b1000 !important;
+}
 
 /* Form */
 

@@ -11,12 +11,12 @@ const {cart, clear,total}= useContext(CartContext)
     return (
         <div>
             {cart.length ?
-                <section className='container'>
+                <section className='container '>
                     {cart.map((item)=> <CartItem key={item.id} item={item} />)}
-                    <p>Total a pagar: ${total()}</p>
+                    <p className='totPrice'>Total a pagar: ${total()}</p>
                     <div>
-                        <button onClick={clear}> Vaciar Carrito </button>
-                        <button> Terminar Compra </button>
+                        <button onClick={clear} className='btn-cart'> Vaciar Carrito </button>
+                        <button className='btn-cart' > Terminar Compra </button>
                     </div>
                 </section>
                 :<section className='container'>
