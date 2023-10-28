@@ -11,7 +11,7 @@ const {cart, clear,total}= useContext(CartContext)
     return (
         <div>
             {cart.length ?
-                <section className='empty'>
+                <section className='container'>
                     {cart.map((item)=> <CartItem key={item.id} item={item} />)}
                     <p>Total a pagar: ${total()}</p>
                     <div>
@@ -19,7 +19,7 @@ const {cart, clear,total}= useContext(CartContext)
                         <button> Terminar Compra </button>
                     </div>
                 </section>
-                :<section className='empty'>
+                :<section className='container'>
                     <h4 >Tu carrito esta empty</h4>
                     <Link to={'/products'} className='btn-buy'> Seguir Comprando</Link>
                 </section>}

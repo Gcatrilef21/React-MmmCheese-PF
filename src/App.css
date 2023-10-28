@@ -97,6 +97,8 @@ h1{
 
 .field {
   padding-bottom: 21px;
+  display: grid;
+  justify-content: center;
 }
 
 .input {

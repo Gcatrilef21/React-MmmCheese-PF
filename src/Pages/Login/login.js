@@ -41,7 +41,7 @@ const Login = ({onLogin}) => {
                 <input onChange={handleOnChange} className="input" name="password" type="text" placeholder="Ingrese su Contraseña" />
             </div>
             <div className="field">
-                <button onClick={handleOnSubmit} className="button">Ingresar</button>
+                <button onClick={handleOnSubmit} className="login-btn">Ingresar</button>
             </div>
         </form>
         </section>
